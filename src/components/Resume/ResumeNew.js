@@ -8,8 +8,6 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
-const resumeLink =
-  "https://raw.githubusercontent.com/soumyajit4419/portfolio/master/src/Assets/Soumyajit_Behera-BIT_MESRA.pdf";
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
@@ -23,6 +21,7 @@ function ResumeNew() {
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
+    setPageNumber(1);
   }
 
   return (
