@@ -35,7 +35,9 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+          <a href={"/my-portfolio"}>
+            <img src={logo} className="img-fluid logo" alt="brand" />
+          </a>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -50,7 +52,11 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <Nav.Link
+                as={Link}
+                to="/my-portfolio"
+                onClick={() => updateExpanded(false)}
+              >
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
@@ -87,7 +93,6 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
-
           </Nav>
         </Navbar.Collapse>
       </Container>

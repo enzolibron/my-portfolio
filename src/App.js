@@ -6,18 +6,17 @@ import Home from "./components/Home/Home";
 import Resume from "./components/Resume/ResumeNew";
 import Projects from "./components/Projects/Projects";
 import About from "./components/About/About";
-import './App.css';
+import "./App.css";
 import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate
+  Navigate,
 } from "react-router-dom";
 
 function App() {
-
   const [load, upadateLoad] = useState(true);
 
   useEffect(() => {
@@ -35,7 +34,7 @@ function App() {
         <Navbar />
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/my-portfolio" element={<Home />} />
           <Route path="/project" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
@@ -44,7 +43,6 @@ function App() {
         {/* <Footer /> */}
       </div>
     </Router>
-
   );
 }
 
