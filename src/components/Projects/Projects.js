@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import pianojs from "../../Assets/Projects/pianojs.png";
 import myportfolio from "../../Assets/Projects/myportfolio.png";
+import facebookclone from "../../Assets/Projects/facebook-clone.png";
 
 function Projects() {
   return (
@@ -17,6 +18,28 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={facebookclone}
+              isBlog={false}
+              title="Facebook Clone React JS"
+              description="Recreating Facebook using React JS. This is a course project of a react js course that i took. 
+              I didn't made it from scratch, it is more of studying the codebase and getting familiar with the libraries 
+              used on one of the biggest applications used out there"
+              ghLink="https://github.com/enzolibron/facebook-clone"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={facebookclone}
+              isBlog={false}
+              title="Facebook Clone ExpressJS"
+              description="Together with the facebook frontend is the backend made using express js."
+              ghLink="https://github.com/enzolibron/facebook-clone-express"
+            />
+          </Col>
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={pianojs}
